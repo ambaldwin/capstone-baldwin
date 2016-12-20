@@ -10,10 +10,10 @@ app.config(function ($routeProvider) {
             templateUrl: '../views/main.html',
             controller: 'MainController'
         })
-        // .when('/register', {
-        //     templateUrl: '../views/register.html',
-        //     controller: 'RegisterController'
-        // })
+        .when('/register', {
+            templateUrl: '../views/register.html',
+            controller: 'RegisterController'
+        })
         // .when('/questions', {
         //     templateUrl: '../views/questions.html',
         //     controller: 'QuestionsController'
