@@ -24,15 +24,5 @@ app.service('capstoneService', function ($resource) {
           isArray: true
         }
       })
-    // questions: $resource('questions/:id', {id: '@id'}, {
-    //   'save': {
-    //     method: 'POST',
-    //     isArray: false
-    //   },
-    //   'get': {
-    //     methid: 'GET',
-    //     isArray: true
-    //   }
-    // })
     }
 })
