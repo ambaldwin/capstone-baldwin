@@ -2,4 +2,6 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
 
   $scope.message = 'message on the register page'
 
+  
+
 })

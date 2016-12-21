@@ -7,12 +7,13 @@ exports.up = function(knex) {
       .inTable('restaurants')
       .onDelete('CASCADE')
       .index();
-    table.integer('user_id').defaultTo(null) //.nullable()
+    table.integer('user_id').defaultTo(null)
     table.string('name');
     table.string('details');
     table.string('dietary');
     table.string('pickup');
     table.decimal('price', 6, 2).notNullable();
+    table.string('image')
     table.timestamps(true, true);
   });
 };
