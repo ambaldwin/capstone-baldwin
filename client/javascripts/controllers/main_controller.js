@@ -2,11 +2,11 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
 
     $scope.message = 'message'
 
-    // $scope.view = {};
+    $scope.view = {};
 
-    // capstoneService.all.get(meal, function(returnedMeals) {
-    //   console.log('returnedMeals in controller:', returnedMeals);
-    //     // $scope.view.citiesArray = city.data
-    // })
+    mainService.getAll.get({}, function(returnedMeals) {
+      console.log('returnedMeals in controller:', returnedMeals);
+        // $scope.view.citiesArray = city.data
+    })
 
 });

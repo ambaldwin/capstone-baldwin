@@ -1,4 +1,4 @@
-app.service('capstoneService', function ($resource) {
+app.service('registerService', function ($resource) {
   return {
     loginRestaurant: $resource('register/:id', {id: '@id'}, {
       'save': {

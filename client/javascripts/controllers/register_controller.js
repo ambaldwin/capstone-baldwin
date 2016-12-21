@@ -1,4 +1,4 @@
-app.controller('RegisterController', function($scope, $routeParams, $location, $cookies, capstoneService) {
+app.controller('RegisterController', function($scope, $routeParams, $location, $cookies, registerService) {
 
     $scope.clearForm = function() {
         $scope.newUser = {}
@@ -11,7 +11,7 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
 
     // restaurant login and signup
     $scope.submitLogIn = function(returningUser) {
-        capstoneService.loginRestaurant.save(returningUser, function(loggedinUser) {
+        registerService.loginRestaurant.save(returningUser, function(loggedinUser) {
             if (!loggedinUser.message) {
                 $cookies.putObject('loggedin', loggedinUser)
                 var id = loggedinUser.id
@@ -25,7 +25,7 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
     }
 
     $scope.submitSignUp = function(newRestaurant,form) {
-      capstoneService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
+      registerService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
         let restaurant = returnedRestaurant[0]
         if (!restaurant.message) {
             $cookies.putObject('loggedin', restaurant)
@@ -40,7 +40,7 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
 
   // user login and signup
   $scope.submitUserLog = function(returningUser) {
-      capstoneService.loginUser.save(returningUser, function(loggedinUser) {
+      registerService.loginUser.save(returningUser, function(loggedinUser) {
           if (!loggedinUser.message) {
               $cookies.putObject('loggedin', loggedinUser)
               var id = loggedinUser.id
@@ -54,7 +54,7 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
   }
 
   $scope.submitUserSignUp = function(newUser,form) {
-  capstoneService.signupUser.save(newUser, function(returnedUser) {
+  registerService.signupUser.save(newUser, function(returnedUser) {
       let user = returnedUser[0]
       if (!user.message) {
           $cookies.putObject('loggedin', user)
