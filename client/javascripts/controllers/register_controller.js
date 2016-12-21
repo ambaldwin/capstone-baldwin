@@ -1,14 +1,15 @@
 app.controller('RegisterController', function($scope, $routeParams, $location, $cookies, capstoneService) {
 
-    $scope.message = 'Are you hungry? Get started below.'
-
     $scope.clearForm = function() {
         $scope.newUser = {}
         $scope.returningUser = {};
         $scope.signUp.$setPristine()
         $scope.logIn.$setPristine()
+        $scope.userLogIn.$setPristine()
+        $scope.userSignUp.$setPristine()
     }
 
+    // restaurant login and signup
     $scope.submitLogIn = function(returningUser) {
         capstoneService.loginRestaurant.save(returningUser, function(loggedinUser) {
             if (!loggedinUser.message) {
@@ -24,7 +25,7 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
     }
 
     $scope.submitSignUp = function(newRestaurant,form) {
-    capstoneService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
+      capstoneService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
         let restaurant = returnedRestaurant[0]
         if (!restaurant.message) {
             $cookies.putObject('loggedin', restaurant)
@@ -34,9 +35,37 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
         } else {
             $scope.error = restaurant.message
         }
-    })
-}
+      })
+    }
 
+  // user login and signup
+  $scope.submitUserLog = function(returningUser) {
+      capstoneService.loginUser.save(returningUser, function(loggedinUser) {
+          if (!loggedinUser.message) {
+              $cookies.putObject('loggedin', loggedinUser)
+              var id = loggedinUser.id
+              $scope.returningUser = {}
+              $scope.userLogIn.$setPristine()
+              $location.url('/')
+          } else {
+              $scope.error = loggedinUser.message
+          }
+      })
+  }
+
+  $scope.submitUserSignUp = function(newUser,form) {
+  capstoneService.signupUser.save(newUser, function(returnedUser) {
+      let user = returnedUser[0]
+      if (!user.message) {
+          $cookies.putObject('loggedin', user)
+          $scope.newUser = {}
+          $scope.userSignUp.$setPristine()
+          $location.url('/')
+      } else {
+          $scope.error = user.message
+      }
+    })
+  }
 
 
 })

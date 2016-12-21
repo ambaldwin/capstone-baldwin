@@ -11,6 +11,18 @@ app.service('capstoneService', function ($resource) {
           method:'POST',
           isArray: true
         }
+      }),
+    loginUser: $resource('registeruser/:id', {id: '@id'}, {
+        'save':  {
+          method:'POST',
+          isArray: false
+        }
+      }),
+    signupUser: $resource('signupuser/:id', {id: '@id'}, {
+        'save':  {
+          method:'POST',
+          isArray: true
+        }
       })
     // questions: $resource('questions/:id', {id: '@id'}, {
     //   'save': {
