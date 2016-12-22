@@ -14,10 +14,10 @@ app.config(function ($routeProvider) {
             templateUrl: '../views/register.html',
             controller: 'RegisterController'
         })
-        // .when('/questions', {
-        //     templateUrl: '../views/questions.html',
-        //     controller: 'QuestionsController'
-        // })
+        .when('/restaurant/:id', {
+            templateUrl: '../views/restaurant.html',
+            controller: 'RestaurantController'
+        })
         // .when('/profile/:id', {
         //     templateUrl: '../views/profile.html',
         //     controller: 'ProfileController'

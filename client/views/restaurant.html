@@ -1,15 +1,26 @@
-<div class="container">
+<div class="container-fluid">
+  <br>
+  <div class="row">
 
-    <div class="container-fluid logo-container">
-        <div class="row">
-            <img src="./stylesheets/logo.png" class="logo col-xs-12 col-md-8" alt="Leftover Log Logo" />
-            <div class="btn-box col-xs-6 col-md-4">
-                <a href="#/register" class="btn btn-default navbar-btn">SIGN UP | LOG IN</a>
-                <br>
-                <a href="#" class="btn btn-default navbar-btn">About Us</a>
-            </div>
-        </div>
+    <div class="col-md-4">
+      <img ng-class="image" class="rest-image" ng-src="{{restaurant.image}}">
     </div>
+
+    <div class="col-md-6">
+      <h2>Welcome, {{restaurant.name}}</h2>
+      <span>Check your meals, who's bought them, edit your meals, other stuff on your dashboard</span>
+    </div>
+
+    <div class="col-md-2">
+      <address>
+        <strong>{{restaurant.name}}</strong><br>
+        {{restaurant.address}}<br>
+        {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip}}<br>
+        <abbr title="Phone">P:</abbr> {{restaurant.phone}}
+      </address>
+    </div>
+
+  </div>
 
     <div class="row">
         <div ng-repeat="meal in view.mealsArray" class="col-xs-12 col-md-8 panel panel-default">
@@ -28,8 +39,8 @@
                 </div>
             </div>
         </div>
-    </div>
+
+  </div>
+
 
 </div>
-
-<!-- col-lg-10 col-lg-offset-1 col-md-10 col-md-offset panel panel-default -->

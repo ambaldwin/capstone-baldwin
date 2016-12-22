@@ -17,6 +17,36 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
                 var id = loggedinUser.id
                 $scope.returningUser = {}
                 $scope.logIn.$setPristine()
+                $location.url(`/restaurant/${id}`)
+            } else {
+                $scope.error = loggedinUser.message
+            }
+        })
+    }
+
+    $scope.submitSignUp = function(newRestaurant, form) {
+        registerService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
+            let restaurant = returnedRestaurant[0]
+            if (!restaurant.message) {
+                $cookies.putObject('loggedin', restaurant)
+                var id = restaurant.id
+                $scope.newUser = {}
+                $scope.signUp.$setPristine()
+                $location.url(`/restaurant/${id}`)
+            } else {
+                $scope.error = restaurant.message
+            }
+        })
+    }
+
+    // user login and signup
+    $scope.submitUserLog = function(returningUser) {
+        registerService.loginUser.save(returningUser, function(loggedinUser) {
+            if (!loggedinUser.message) {
+                $cookies.putObject('loggedin', loggedinUser)
+                var id = loggedinUser.id
+                $scope.returningUser = {}
+                $scope.userLogIn.$setPristine()
                 $location.url('/')
             } else {
                 $scope.error = loggedinUser.message
@@ -24,48 +54,19 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
         })
     }
 
-    $scope.submitSignUp = function(newRestaurant,form) {
-      registerService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
-        let restaurant = returnedRestaurant[0]
-        if (!restaurant.message) {
-            $cookies.putObject('loggedin', restaurant)
-            $scope.newUser = {}
-            $scope.signUp.$setPristine()
-            $location.url('/')
-        } else {
-            $scope.error = restaurant.message
-        }
-      })
+    $scope.submitUserSignUp = function(newUser, form) {
+        registerService.signupUser.save(newUser, function(returnedUser) {
+            let user = returnedUser[0]
+            if (!user.message) {
+                $cookies.putObject('loggedin', user)
+                $scope.newUser = {}
+                $scope.userSignUp.$setPristine()
+                $location.url('/')
+            } else {
+                $scope.error = user.message
+            }
+        })
     }
-
-  // user login and signup
-  $scope.submitUserLog = function(returningUser) {
-      registerService.loginUser.save(returningUser, function(loggedinUser) {
-          if (!loggedinUser.message) {
-              $cookies.putObject('loggedin', loggedinUser)
-              var id = loggedinUser.id
-              $scope.returningUser = {}
-              $scope.userLogIn.$setPristine()
-              $location.url('/')
-          } else {
-              $scope.error = loggedinUser.message
-          }
-      })
-  }
-
-  $scope.submitUserSignUp = function(newUser,form) {
-  registerService.signupUser.save(newUser, function(returnedUser) {
-      let user = returnedUser[0]
-      if (!user.message) {
-          $cookies.putObject('loggedin', user)
-          $scope.newUser = {}
-          $scope.userSignUp.$setPristine()
-          $location.url('/')
-      } else {
-          $scope.error = user.message
-      }
-    })
-  }
 
 
 })

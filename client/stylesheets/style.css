@@ -4,6 +4,7 @@ body {
   background-color: #1E90FF !important;
 }
 
+/*home page*/
 .meal-image {
   height: 180px;
   width: 150px;
@@ -11,20 +12,16 @@ body {
   border-radius: 50%;
 }
 
-.container-fluid {
-  width: 1300px;
-}
-
 .logo {
   width: 700px;
-  margin-bottom: 50px;
-  margin-top: 20px;
-  margin-left: 150px;
-  margin-right: 40px;
   align-self: center;
-  float: left;
 }
 
-.btn-box {
-  padding: 20px;
+.container {
+  align-self: center;
+}
+
+/*restaurant dashboard*/
+.rest-image {
+  height: 200px;
 }
