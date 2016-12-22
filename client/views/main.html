@@ -1,4 +1,18 @@
-<h1>main view html</h1>
-
-<h1>{{message}}</h1>
-<h3>{{message}}</h3>
+<div ng-repeat="meal in view.mealsArray">
+  <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset panel panel-default">
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-right">
+          <img ng-class="image" ng-src="{{meal.image}}">
+        </div>
+        <div class="media-body">
+          <h2> {{meal.mealName}} | {{meal.price}}
+          </h2>
+          <br>
+          <p>{{meal.details}}</p>
+        </div>
+        <div class="pull-left text-center"><strong>Pick-up :</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small></div>
+        </div>
+    </div>
+  </div>
+</div>

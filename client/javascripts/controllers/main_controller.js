@@ -4,9 +4,8 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
 
     $scope.view = {};
 
-    mainService.getAll.get({}, function(returnedMeals) {
-      console.log('returnedMeals in controller:', returnedMeals);
-        // $scope.view.citiesArray = city.data
+    mainService.meals.get({}, function(returnedMeals) {
+        $scope.view.mealsArray = returnedMeals
     })
 
 });
