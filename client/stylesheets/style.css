@@ -1,5 +1,30 @@
 body {
   /*padding: 50px;*/
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
   background-color: #1E90FF !important;
+}
+
+.meal-image {
+  height: 180px;
+  width: 150px;
+  border-bottom: 2px black solid;
+  border-radius: 50%;
+}
+
+.container-fluid {
+  width: 1300px;
+}
+
+.logo {
+  width: 700px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 40px;
+  align-self: center;
+  float: left;
+}
+
+.btn-box {
+  padding: 20px;
 }

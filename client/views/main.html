@@ -1,18 +1,29 @@
-<div ng-repeat="meal in view.mealsArray">
-  <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset panel panel-default">
-    <div class="panel-body">
-      <div class="media">
-        <div class="media-right">
-          <img ng-class="image" ng-src="{{meal.image}}">
-        </div>
-        <div class="media-body">
-          <h2> {{meal.mealName}} | {{meal.price}}
-          </h2>
-          <br>
-          <p>{{meal.details}}</p>
-        </div>
-        <div class="pull-left text-center"><strong>Pick-up :</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small></div>
+<div class="container-fluid">
+  <div class="container-fluid">
+    <img src="./stylesheets/logo.png" class="logo" alt="Leftover Log Logo"/>
+      <div class="btn-box">
+        <a href="#/register" class="btn btn-default navbar-btn">SIGN UP | LOG IN</a>
+        <br>
+        <a href="#" class="btn btn-default navbar-btn">About Us</a>
+      </div>
+  </div>
+
+    <div ng-repeat="meal in view.mealsArray">
+        <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset panel panel-default">
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>{{meal.mealName}}</h2>
+                        <h3>{{meal.price}}</h3>
+                        <h3><strong>{{meal.name}}</strong></h3>
+                        <p>{{meal.details}}</p>
+                    </div>
+                    <div class="media-right">
+                        <img ng-class="image" class="meal-image" ng-src="{{meal.image}}">
+                    </div>
+                    <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small></div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 </div>
