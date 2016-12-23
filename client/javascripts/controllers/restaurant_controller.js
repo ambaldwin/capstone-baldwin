@@ -7,8 +7,8 @@ app.controller('RestaurantController', function($scope, $routeParams, $location,
 
     $scope.view = {};
 
-    mainService.getId.get({id: id}, function(returnedMeals) {
-        $scope.view.mealsArray = returnedMeals
+    mainService.getId(id).then(function(returnedMeals) {
+        $scope.view.mealsArray = returnedMeals.data
     })
 
 

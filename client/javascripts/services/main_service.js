@@ -1,19 +1,10 @@
-app.service('mainService', function ($resource) {
+app.service('mainService', function ($http) {
   return {
-    meals: $resource('index', {id: '@id'}, {
-      'get': {
-        method: 'GET',
-        isArray: true
-      }
-      // 'update': {
-      //   method: 'PUT'
-      // }
-    }),
-    getId: $resource('index/:id', {id: '@id'}, {
-        'get':  {
-          method:'GET',
-          isArray: true
-        }
-      })
+    meals: function() {
+      return $http.get('./index');
+    },
+    getId: function(id) {
+      return $http.get(`/index/${id}`)
+    }
   }
 })

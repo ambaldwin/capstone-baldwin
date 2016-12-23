@@ -1,28 +1,16 @@
-app.service('registerService', function ($resource) {
+app.service('registerService', function ($http) {
   return {
-    loginRestaurant: $resource('register', {id: '@id'}, {
-      'save': {
-        method: 'POST',
-        isArray: false
-      }
-    }),
-    signupRestaurant: $resource('signup', {id: '@id'}, {
-        'save':  {
-          method:'POST',
-          isArray: true
-        }
-      }),
-    loginUser: $resource('registeruser', {id: '@id'}, {
-        'save':  {
-          method:'POST',
-          isArray: false
-        }
-      }),
-    signupUser: $resource('signupuser', {id: '@id'}, {
-        'save':  {
-          method:'POST',
-          isArray: true
-        }
-      })
+    loginRestaurant: function(returningUser) {
+      return $http.post('./register', returningUser);
+    },
+    signupRestaurant: function(newRestaurant) {
+      return $http.post('./signup', newRestaurant)
+    },
+    loginUser: function(returningUser) {
+      return $http.post('./registeruser', returningUser);
+    },
+    signupUser: function(newUser) {
+         return $http.post('./signupuser', newUser);
+       }
     }
 })

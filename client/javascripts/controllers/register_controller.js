@@ -11,22 +11,23 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
 
     // restaurant login and signup
     $scope.submitLogIn = function(returningUser) {
-        registerService.loginRestaurant.save(returningUser, function(loggedinUser) {
-            if (!loggedinUser.message) {
-                $cookies.putObject('loggedin', loggedinUser)
-                var id = loggedinUser.id
+        registerService.loginRestaurant(returningUser).then(function(loggedinUser) {
+            let restaurant = loggedinUser.data
+            if (!restaurant.message) {
+                $cookies.putObject('loggedin', restaurant)
+                var id = restaurant.id
                 $scope.returningUser = {}
                 $scope.logIn.$setPristine()
                 $location.url(`/restaurant/${id}`)
             } else {
-                $scope.error = loggedinUser.message
+                $scope.error = restaurant.message
             }
         })
     }
 
     $scope.submitSignUp = function(newRestaurant, form) {
-        registerService.signupRestaurant.save(newRestaurant, function(returnedRestaurant) {
-            let restaurant = returnedRestaurant[0]
+        registerService.signupRestaurant(newRestaurant).then(function(returnedRestaurant) {
+            let restaurant = returnedRestaurant.data
             if (!restaurant.message) {
                 $cookies.putObject('loggedin', restaurant)
                 var id = restaurant.id
@@ -41,22 +42,23 @@ app.controller('RegisterController', function($scope, $routeParams, $location, $
 
     // user login and signup
     $scope.submitUserLog = function(returningUser) {
-        registerService.loginUser.save(returningUser, function(loggedinUser) {
-            if (!loggedinUser.message) {
-                $cookies.putObject('loggedin', loggedinUser)
-                var id = loggedinUser.id
+        registerService.loginUser(returningUser).then(function(loggedinUser) {
+          let user = loggedinUser.data
+            if (!user.message) {
+                $cookies.putObject('loggedin', user)
+                var id = user.id
                 $scope.returningUser = {}
                 $scope.userLogIn.$setPristine()
                 $location.url('/')
             } else {
-                $scope.error = loggedinUser.message
+                $scope.error = user.message
             }
         })
     }
 
     $scope.submitUserSignUp = function(newUser, form) {
-        registerService.signupUser.save(newUser, function(returnedUser) {
-            let user = returnedUser[0]
+        registerService.signupUser(newUser).then(function(returnedUser) {
+            let user = returnedUser.data
             if (!user.message) {
                 $cookies.putObject('loggedin', user)
                 $scope.newUser = {}

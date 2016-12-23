@@ -2,16 +2,15 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
 
     $scope.view = {};
 
-    let cookie = $cookies.getObject('loggedin')
-    let id = cookie.id
+    // let cookie = $cookies.getObject('loggedin')
+    // let id = cookie.id
 
-    mainService.meals.get({}, function(returnedMeals) {
-        $scope.view.mealsArray = returnedMeals
+    mainService.meals().then(function(returnedMeals) {
+        $scope.view.mealsArray = returnedMeals.data
     })
 
     $scope.updateMeal = function(meal) {
-      console.log('MEAL:', meal);
-      console.log('id:', id);
+
         // mainService.meals.update(meal, function(returnedMeals) {
         //     console.log('id in the meals update service');
         //     console.log('in the meals update service:', meal);

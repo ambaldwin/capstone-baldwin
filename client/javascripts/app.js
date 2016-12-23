@@ -1,8 +1,8 @@
-var app = angular.module('capstoneApp', ['ngRoute', 'ngResource', 'ngCookies'])
+var app = angular.module('capstoneApp', ['ngRoute', 'ngCookies'])
 
-app.config(['$resourceProvider', function($resourceProvider) {
-  $resourceProvider.defaults.stripTrailingSlashes = false;
-}]);
+// app.config(['$resourceProvider', function($resourceProvider) {
+//   $resourceProvider.defaults.stripTrailingSlashes = false;
+// }]);
 
 app.config(function ($routeProvider) {
     $routeProvider

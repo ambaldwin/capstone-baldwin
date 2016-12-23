@@ -22,13 +22,13 @@ router.post('/', (req, res, next) => {
                 knex('users')
                     .insert(newUser, '*')
                     .then((insertedUser) => {
-                        res.json(insertedUser)
+                        res.json(insertedUser[0])
                     })
             } else {
                 const error = {
                     message: 'Already a user, please log in!'
                 }
-                res.json([error])
+                res.json(error)
             }
         })
 })
