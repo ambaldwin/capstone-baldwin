@@ -21,5 +21,22 @@ router.get('/:id', (req, res, next) => {
       })
 })
 
+router.put('/', function(req, res, next) {
+  console.log('in the editing meal route');
+  console.log('req.body:', req.body)
+  console.log('req.params:', req.params);
+  // let editedMeal = {
+  //     title: req.body.title,
+  //     image: req.body.image,
+  //     description: req.body.description,
+  //   }
+      // knex('posts').where('posts.id', req.body.postId).first()
+      //     .update(editedCity, '*')
+      //     .then(function(city) {
+      //         res.json('city/post updated')
+      //   })
+
+})
+
 
 module.exports = router;

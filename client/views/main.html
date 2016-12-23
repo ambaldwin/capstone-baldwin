@@ -12,12 +12,27 @@
     </div>
 
     <div class="row">
+
+        <!-- column with shopping cart and featured restaurants -->
+        <div class="left-column col-xs-6 col-md-4 panel panel-default">
+            <div>
+                <h2>Shopping Cart</h2>
+
+                <ul ng-repeat="meal in shoppingCart">
+                    <strong>{{meal.mealName}}</strong>, {{meal.price | currency}}
+                </ul>
+                <p><strong>Tax:</strong> {{totalTax | currency}}</p>
+                <p><strong>Total Cost:</strong> {{totalCost | currency}}</p>
+            </div>
+        </div>
+
+        <!-- available meals list -->
         <div ng-repeat="meal in view.mealsArray" class="col-xs-12 col-md-8 panel panel-default">
             <div class="panel-body">
                 <div class="media">
                     <div class="media-body">
                         <h2>{{meal.mealName}}</h2>
-                        <h3>{{meal.price}}</h3>
+                        <h3>{{meal.price | currency}}</h3>
                         <h3><strong>{{meal.name}}</strong></h3>
                         <p>{{meal.details}}</p>
                     </div>
@@ -25,11 +40,12 @@
                         <img ng-class="image" class="meal-image" ng-src="{{meal.image}}">
                     </div>
                     <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small></div>
+                    <br>
+                    <button ng-click="addItem(meal); updateMeal(meal)">Add To Cart</button>
                 </div>
             </div>
         </div>
+
     </div>
 
 </div>
-
-<!-- col-lg-10 col-lg-offset-1 col-md-10 col-md-offset panel panel-default -->

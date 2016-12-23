@@ -21,6 +21,10 @@ body {
   align-self: center;
 }
 
+.left-column {
+  height: 2000px;
+}
+
 /*restaurant dashboard*/
 .rest-image {
   height: 200px;
