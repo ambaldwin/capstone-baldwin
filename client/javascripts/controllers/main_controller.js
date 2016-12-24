@@ -2,20 +2,29 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
 
     $scope.view = {};
 
-    // let cookie = $cookies.getObject('loggedin')
-    // let id = cookie.id
-
     mainService.meals().then(function(returnedMeals) {
         $scope.view.mealsArray = returnedMeals.data
     })
 
     $scope.updateMeal = function(meal) {
+      let cookie = $cookies.getObject('loggedin')
+      let id = cookie.id
 
-        // mainService.meals.update(meal, function(returnedMeals) {
-        //     console.log('id in the meals update service');
-        //     console.log('in the meals update service:', meal);
-        //     $scope.view.mealsArray = returnedMeals
-        // })
+      let updatedMeal = {
+        id: meal.id,
+        restaurant_id: meal.restaurant_id,
+        name: meal.mealName,
+        details: meal.details,
+        dietary: meal.dietary,
+        pickup: meal.pickup,
+        price: meal.price,
+        image: meal.image,
+        user_id: id
+      }
+
+        mainService.update(updatedMeal).then(function(returnedMeals) {
+          console.log(returnedMeals);
+        })
     }
 
     //shopping cart info below
