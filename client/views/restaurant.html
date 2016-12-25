@@ -9,6 +9,7 @@
     <div class="col-md-6">
       <h2>Welcome, {{restaurant.name}}</h2>
       <span>Check your meals, who's bought them, edit your meals, other stuff on your dashboard</span>
+      <button type="button" name="button" class="btn btn-default center-block" ng-click="showAddMeal = !showAddMeal; clearForm()">Add New Meal</button>
     </div>
 
     <div class="col-md-2">
@@ -23,6 +24,47 @@
   </div>
 
     <div class="row">
+
+      <!-- form for adding a new meal -->
+      <form name="addedMeal" ng-submit="addMeal(meal)" ng-show="showAddMeal">
+          <div class="form-group" ng-class="{'has-error' : addedMeal.name.$invalid && !addedMeal.name.$pristine,'has-success' : addedMeal.name.$valid }">
+              <label class="control-label" for="name">Name:</label>
+              <input type="text" name="name" class="form-control" ng-model="meal.name" ng-minlength="2" ng-maxlength="25" ng-required="true" placeholder="Name">
+              <small ng-show="addedMeal.name.$error.minlength" class="help-block">Name is too short.</small>
+              <small ng-show="addedMeal.name.$error.maxlength" class="help-block">Name is too long.</small>
+          </div>
+          <div class="form-group" ng-class="{'has-error' : addedMeal.details.$invalid && !addedMeal.details.$pristine,'has-success' : addedMeal.details.$valid }">
+              <label class="control-label" for="details">Details:</label>
+              <input type="text" name="details" class="form-control" ng-model="meal.details" ng-minlength="2" ng-maxlength="100" ng-required="true" placeholder="Details">
+              <small ng-show="addedMeal.details.$error.minlength" class="help-block">Too short.</small>
+              <small ng-show="addedMeal.details.$error.maxlength" class="help-block">Too long.</small>
+          </div>
+          <div class="form-group" ng-class="{'has-error' : addedMeal.dietary.$invalid && !addedMeal.dietary.$pristine,'has-success' : addedMeal.dietary.$valid }">
+              <label class="control-label" for="dietary">Dietary Notes:</label>
+              <input type="text" name="dietary" class="form-control" ng-model="meal.dietary" ng-minlength="2" ng-maxlength="30" ng-required="true" placeholder="Dietary notes">
+              <small ng-show="addedMeal.dietary.$error.minlength" class="help-block">Too short.</small>
+              <small ng-show="addedMeal.dietary.$error.maxlength" class="help-block">Too long.</small>
+          </div>
+          <div class="form-group" ng-class="{'has-error' : addedMeal.pickup.$invalid && !addedMeal.pickup.$pristine,'has-success' : addedMeal.pickup.$valid }">
+              <label class="control-label" for="pickup">Pickup Details:</label>
+              <input type="text" name="pickup" class="form-control" ng-model="meal.pickup" ng-minlength="2" ng-maxlength="50" ng-required="true" placeholder="Pickup Notes">
+              <small ng-show="addedMeal.pickup.$error.minlength" class="help-block">Too short.</small>
+              <small ng-show="addedMeal.pickup.$error.maxlength" class="help-block">Too long.</small>
+          </div>
+          <div class="form-group" ng-class="{'has-error': addedMeal.image.$invalid && !addedMeal.image.$pristine, 'has-success': addedMeal.image.$valid}">
+              <label class="control-label" for="image">Image URL</label>
+              <input class="form-control" type="text" name="image" ng-model="meal.image" ng-required="true">
+          </div>
+          <div class="form-group" ng-class="{'has-error' : addedMeal.price.$invalid && !addedMeal.price.$pristine,'has-success' : addedMeal.price.$valid }">
+              <label class="control-label" for="price">Price:</label>
+              <input type="text" name="price" class="form-control" ng-model="meal.price" ng-minlength="4" ng-maxlength="5" ng-required="true" placeholder="##.##">
+              <small ng-show="addedMeal.price.$error.minlength" class="help-block">Price is too short.</small>
+              <small ng-show="addedMeal.price.$error.maxlength" class="help-block">Price is too long.</small>
+          </div>
+          <button type="submit" class="btn btn-default center-block" ng-disabled="addedMeal.$invalid">Add Meal</button>
+      </form>
+
+      <!-- meals creation on restaurant page for just the one specific restaurant -->
         <div ng-repeat="meal in view.mealsArray" class="col-xs-12 col-md-8 panel panel-default">
             <div class="panel-body">
                 <div class="media">

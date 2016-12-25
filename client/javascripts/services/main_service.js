@@ -7,9 +7,10 @@ app.service('mainService', function ($http) {
       return $http.get(`/index/${id}`)
     },
     update: function(meal) {
-      console.log('meal in service:', meal);
-      console.log('in the update service');
       return $http.put('./index', meal)
+    },
+    new: function(meal) {
+      return $http.post('./index', meal)
     }
   }
 })

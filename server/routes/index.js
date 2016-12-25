@@ -21,7 +21,7 @@ router.get('/:id', (req, res, next) => {
       })
 })
 
-router.put('/', function(req, res, next) {
+router.put('/', (req, res, next) => {
   let updatedMeal = req.body
       knex('meals').where('meals.id', req.body.id).first()
           .update(updatedMeal, '*')
@@ -30,6 +30,13 @@ router.put('/', function(req, res, next) {
         })
 
 })
+
+router.post('/', (req, res, next) => {
+    knex('meals').insert(req.body, '*')
+        .then((results) => {
+            res.json(results);
+        })
+});
 
 
 module.exports = router;
