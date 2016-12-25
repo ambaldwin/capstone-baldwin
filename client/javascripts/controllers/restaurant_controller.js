@@ -30,9 +30,9 @@ app.controller('RestaurantController', function($scope, $routeParams, $location,
 
         mainService.new(newMeal).then(function(results) {
             console.log('results back after route:', results);
-            // $scope.view.mealsArray.push(results.data[0]);
-            // $scope.meal = {}
-            // $scope.addedMeal.$setPristine()
+            $scope.view.mealsArray.push(results.data[0]);
+            $scope.meal = {}
+            $scope.addedMeal.$setPristine()
         })
     }
 
