@@ -24,7 +24,6 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
             details: meal.details,
             dietary: meal.dietary,
             pickup: meal.pickup,
-            image: meal.image,
             price: meal.price
         }
 

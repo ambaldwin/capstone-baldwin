@@ -18,7 +18,6 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
         dietary: meal.dietary,
         pickup: meal.pickup,
         price: meal.price,
-        image: meal.image,
         user_id: id
       }
 
