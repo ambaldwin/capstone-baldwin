@@ -25,7 +25,7 @@ router.put('/', (req, res, next) => {
   let updatedMeal = req.body
       knex('meals').where('meals.id', req.body.id).first()
           .update(updatedMeal, '*')
-          .then(function(meal) {
+          .then((meal) => {
               res.json('meal updated with user_id')
         })
 

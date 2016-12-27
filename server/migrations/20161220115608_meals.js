@@ -13,7 +13,6 @@ exports.up = function(knex) {
     table.string('dietary');
     table.string('pickup');
     table.decimal('price', 6, 2).notNullable();
-    table.string('image')
     table.timestamps(true, true);
   });
 };

@@ -1,4 +1,4 @@
-app.controller('RestaurantController', function($scope, $routeParams, $location, $cookies, mainService) {
+app.controller('RestaurantController', function($scope, $route, $cookies, mainService, editService) {
 
     let cookie = $cookies.getObject('loggedin')
     let id = cookie.id
@@ -29,11 +29,28 @@ app.controller('RestaurantController', function($scope, $routeParams, $location,
         }
 
         mainService.new(newMeal).then(function(results) {
-            console.log('results back after route:', results);
             $scope.view.mealsArray.push(results.data[0]);
             $scope.meal = {}
             $scope.addedMeal.$setPristine()
         })
+    }
+
+    //restaurant can edit a meal
+    $scope.submitEditMeal = function(meal) {
+        editService.edit(meal).then(function() {})
+    }
+
+    //restaurant can delete a meal
+    $scope.deleteMeal = function(meal) {
+        editService.delete(meal).then(function() {})
+        $route.reload();
+    }
+
+    //marking a meal ready
+    $scope.markReady = function() {
+        console.log('in the mark ready function');
+
+        //function to delete from database
     }
 
 

@@ -36,12 +36,10 @@
                         <h3><strong>{{meal.name}}</strong></h3>
                         <p>{{meal.details}}</p>
                     </div>
-                    <div class="media-right">
-                        <img ng-class="image" class="meal-image" ng-src="{{meal.image}}">
-                    </div>
                     <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small></div>
                     <br>
-                    <button ng-click="addItem(meal); updateMeal(meal)">Add To Cart</button>
+                    <button ng-show="meal.user_id == null" ng-click="addItem(meal); updateMeal(meal)">Add To Cart</button>
+                    <button ng-show="meal.user_id !== null" ng-disabled="true">Ordering...</button>
                 </div>
             </div>
         </div>

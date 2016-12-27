@@ -1,4 +1,4 @@
-app.controller('RegisterController', function($scope, $routeParams, $location, $cookies, registerService) {
+app.controller('RegisterController', function($scope, $location, $cookies, registerService) {
 
     $scope.clearForm = function() {
         $scope.newUser = {}
