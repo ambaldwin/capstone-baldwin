@@ -11,6 +11,10 @@ app.service('mainService', function ($http) {
     },
     new: function(meal) {
       return $http.post('./index', meal)
+    },
+    pounds: function(restaurant) {
+      const id = restaurant.id
+      return $http.put(`/index/${id}`, restaurant)
     }
   }
 })

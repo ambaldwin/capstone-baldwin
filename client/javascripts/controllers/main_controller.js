@@ -1,9 +1,13 @@
-app.controller('MainController', function($scope, $routeParams, $location, $cookies, mainService) {
+app.controller('MainController', function($scope, $routeParams, $location, $cookies, mainService, editService) {
 
     $scope.view = {};
 
     mainService.meals().then(function(returnedMeals) {
         $scope.view.mealsArray = returnedMeals.data
+    })
+
+    editService.calculate().then(function(returnedPounds) {
+        $scope.pounds = returnedPounds.data
     })
 
     $scope.updateMeal = function(meal) {
@@ -22,7 +26,6 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
       }
 
         mainService.update(updatedMeal).then(function(returnedMeals) {
-          console.log(returnedMeals);
         })
     }
 

@@ -9,6 +9,7 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
 
     mainService.getId(id).then(function(returnedMeals) {
         $scope.view.mealsArray = returnedMeals.data
+        $scope.pounds = returnedMeals.data[0].pounds
     })
 
     //restaurant can add new meal
@@ -45,11 +46,21 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
         $route.reload();
     }
 
+    function addPounds(restaurant) {
+      restaurant.pounds += 2
+      mainService.pounds(restaurant).then(function() {})
+      $route.reload();
+    }
+
     //marking a meal ready
-    $scope.markReady = function() {
-        console.log('in the mark ready function');
+    $scope.markReady = function(restaurant) {
 
         //function to delete from database
+
+        //function to increment lbs for restaurant
+        addPounds(restaurant)
+
+        //send text message to user
     }
 
 

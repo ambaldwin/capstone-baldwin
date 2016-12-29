@@ -2,6 +2,17 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 
+router.get('/', (req, res, next) => {
+  knex('restaurants')
+    .then((restaurants) => {
+      let sum = 0
+      for (var i = 0; i < restaurants.length; i++) {
+        sum += restaurants[i].pounds
+      }
+      res.json(sum)
+    })
+})
+
 router.put('/:id', (req, res, next) => {
     let editedMeal = {
         user_id: null,
@@ -14,7 +25,7 @@ router.put('/:id', (req, res, next) => {
 
     knex('meals').where('id', req.body.id).first()
         .update(editedMeal)
-        .then(function(meal) {
+        .then((meal) => {
             res.json('meal updated')
         })
 })

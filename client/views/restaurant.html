@@ -10,15 +10,16 @@
             <h2>Welcome, {{restaurant.name}}</h2>
             <span>Check your meals, who's bought them, edit your meals, other stuff on your dashboard</span>
             <button type="button" name="button" class="btn btn-default center-block" ng-click="showAddMeal = !showAddMeal; clearForm()">Add New Meal</button>
+            <h3>Pounds: {{pounds}}</h3>
         </div>
 
         <div class="col-md-2">
-            <address>
-        <strong>{{restaurant.name}}</strong><br>
-        {{restaurant.address}}<br>
-        {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip}}<br>
-        <abbr title="Phone">P:</abbr> {{restaurant.phone}}
-      </address>
+          <address>
+            <strong>{{restaurant.name}}</strong><br>
+              {{restaurant.address}}<br>
+              {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip}}<br>
+            <abbr title="Phone">P:</abbr> {{restaurant.phone}}
+          </address>
         </div>
 
     </div>
@@ -68,7 +69,7 @@
                         <h2>{{meal.mealName}}</h2>
                         <h3>{{meal.price}}</h3>
                         <p>{{meal.details}}</p>
-                        <button ng-show="meal.user_id !== null" ng-click="markReady()">Mark As Ready!</button>
+                        <button ng-show="meal.user_id !== null" ng-click="markReady(restaurant)">Mark As Ready!</button>
                     </div>
                     <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small>
                         <nav aria-label="...">

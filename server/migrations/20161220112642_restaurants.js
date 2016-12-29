@@ -6,6 +6,7 @@ exports.up = function(knex) {
     table.string('email').unique()
     table.specificType('hash', 'character(60)')
     table.string('image')
+    table.integer('pounds').defaultTo(0)
     table.string('phone')
     table.string('address');
     table.string('city',50).notNullable();
