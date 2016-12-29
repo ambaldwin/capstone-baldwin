@@ -40,12 +40,13 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
         editService.edit(meal).then(function() {})
     }
 
-    //restaurant can delete a meal
+    //restaurant can delete a meal individually before it's ordered
     $scope.deleteMeal = function(meal) {
         editService.delete(meal).then(function() {})
         $route.reload();
     }
 
+    //funcion that is called to add pounds to restaurant in database
     function addPounds(restaurant) {
       restaurant.pounds += 2
       mainService.pounds(restaurant).then(function() {})
@@ -55,12 +56,16 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
     //marking a meal ready
     $scope.markReady = function(restaurant) {
 
-        //function to delete from database
+        //function to delete meal from database
+        $scope.deleteMeal = function(meal) {
+            editService.delete(meal).then(function() {})
+            $route.reload();
+        }
 
         //function to increment lbs for restaurant
         addPounds(restaurant)
 
-        //send text message to user
+        //send text message to user, twillio stuff
     }
 
 

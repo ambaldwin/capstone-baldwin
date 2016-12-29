@@ -69,7 +69,7 @@
                         <h2>{{meal.mealName}}</h2>
                         <h3>{{meal.price}}</h3>
                         <p>{{meal.details}}</p>
-                        <button ng-show="meal.user_id !== null" ng-click="markReady(restaurant)">Mark As Ready!</button>
+                        <button ng-show="meal.user_id !== null" ng-click="markReady(restaurant); deleteMeal(meal)">Mark As Ready!</button>
                     </div>
                     <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small>
                         <nav aria-label="...">
