@@ -1,9 +1,5 @@
 var app = angular.module('capstoneApp', ['ngRoute', 'ngCookies'])
 
-// app.config(['$resourceProvider', function($resourceProvider) {
-//   $resourceProvider.defaults.stripTrailingSlashes = false;
-// }]);
-
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
@@ -18,8 +14,8 @@ app.config(function ($routeProvider) {
             templateUrl: '../views/restaurant.html',
             controller: 'RestaurantController'
         })
-        // .when('/profile/:id', {
-        //     templateUrl: '../views/profile.html',
-        //     controller: 'ProfileController'
-        // })
+        .when('/about', {
+            templateUrl: '../views/about.html'
+            // controller: 'ProfileController'
+        })
 })

@@ -5,16 +5,9 @@ body {
 }
 
 /*home page*/
-.meal-image {
-  height: 180px;
-  width: 150px;
-  border-bottom: 2px black solid;
-  border-radius: 50%;
-}
-
-.logo {
-  width: 700px;
-  align-self: center;
+img.logo {
+  width: 400px;
+  /*align-self: center;*/
 }
 
 .container {
