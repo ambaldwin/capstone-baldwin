@@ -64,22 +64,28 @@
         <!-- meals creation on restaurant page for just the one specific restaurant -->
         <div ng-repeat="meal in view.mealsArray" class="col-xs-12 col-md-8 panel panel-default">
             <div class="panel-body">
-                <div class="media">
-                    <div class="media-body">
-                        <h2>{{meal.mealName}}</h2>
-                        <h3>{{meal.price | currency}}</h3>
-                        <p>{{meal.details}}</p>
-                        <button ng-show="meal.user_id !== null" ng-click="markReady(restaurant); deleteMeal(meal)">Mark As Ready!</button>
-                    </div>
-                    <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small>
-                        <nav aria-label="...">
-                            <ul class="pager">
-                                <li ng-click="showEditForm = !showEditForm">Edit</li>
-                                <li ng-click="deleteMeal(meal)">Delete</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+              <table class="table table-striped">
+                <tr>
+                  <th>Status</th>
+                  <th>Meal</th>
+                  <th>Price</th>
+                  <th>Pickup</th>
+                  <th>Dietary</th>
+                  <th>Details</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+                <tr>
+                  <td><button ng-show="meal.user_id !== null" ng-click="markReady(restaurant)">Ready!</button></td>
+                  <td>{{meal.mealName}}</td>
+                  <td>{{meal.price | currency}}</td>
+                  <td>{{meal.pickup}}</td>
+                  <td>{{meal.dietary}}</td>
+                  <td>{{meal.details}}</td>
+                  <td><li ng-click="showEditForm = !showEditForm">Edit</li></td>
+                  <td><li ng-click="deleteMeal(meal)">Delete</li></td>
+                </tr>
+              </table>
 
                 <!-- edit meal from -->
                 <form name="editMeal" ng-submit="submitEditMeal(meal)" ng-show="showEditForm">

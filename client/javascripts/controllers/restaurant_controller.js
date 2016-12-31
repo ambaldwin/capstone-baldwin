@@ -56,11 +56,7 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
     //marking a meal ready
     $scope.markReady = function(restaurant) {
 
-        //function to delete meal from database
-        $scope.deleteMeal = function(meal) {
-            editService.delete(meal).then(function() {})
-            $route.reload();
-        }
+        //function to delete meal from database // mark red as in already ordered
 
         //function to increment lbs for restaurant
         addPounds(restaurant)

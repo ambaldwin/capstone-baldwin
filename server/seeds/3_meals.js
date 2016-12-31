@@ -5,7 +5,7 @@ exports.seed = function(knex) {
         restaurant_id: 1,
         user_id: null,
         name: 'Chicken Fried Calamari Steak',
-        details: 'Buttermilk brined wild caught Humboldt squid, lemon pepper aioli, Ozuke collard green kimchi. Creamed kale side.',
+        details: 'Buttermilk brined wild caught squid, lemon aioli, Ozuke collard green kimchi.',
         dietary: 'gluten-free',
         pickup: 'Before close',
         price: 5.99
@@ -14,7 +14,7 @@ exports.seed = function(knex) {
         restaurant_id: 1,
         user_id: null,
         name: 'Lamb & Oat Meatloaf',
-        details: 'Triple m bar ranch lamb, grassfed beef, Elevation ketchup, pumpkin seed pesto, crispy sweet potato bites.',
+        details: 'Triple m bar ranch lamb, grassfed beef, Elevation ketchup, pumpkin seed pesto, sweet potato bites.',
         dietary: 'gluten-free options',
         pickup: 'Before close',
         price: 6.99
