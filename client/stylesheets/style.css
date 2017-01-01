@@ -1,22 +1,32 @@
-body {
-  /*padding: 50px;*/
-  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+/*home page*/
+nav.navbar {
+  height: 80px;
 }
 
-/*home page*/
 img.logo {
   width: 400px;
-  /*align-self: center;*/
+  align-self: center;
 }
 
-.right {
-  background-color: red;
-}
-
-.jumbotron {
+/*jumbotron*/
+div.jumbotron {
+  margin-top: -15px;
   height: 500px;
+  background-color: green;
 }
 
+div.row.jumbo-row {
+  height: 500px;
+  margin-top: -48px;
+}
+
+div.jumbotron-left {
+  padding-left: 150px;
+  padding-top: 50px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/*main body of main page*/
 .container {
   align-self: center;
 }
