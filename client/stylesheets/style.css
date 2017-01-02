@@ -5,7 +5,11 @@ nav.navbar {
 
 img.logo {
   width: 400px;
-  align-self: center;
+  margin-top: 8px;
+}
+
+.dropdown {
+  margin-top: 20px;
 }
 
 /*jumbotron*/
@@ -31,6 +35,10 @@ div.jumbotron-left {
   align-self: center;
 }
 
+.container-fluid {
+  align: center;
+}
+
 .left-column {
   height: 2000px;
 }
@@ -38,4 +46,11 @@ div.jumbotron-left {
 /*restaurant dashboard*/
 .rest-image {
   height: 200px;
+}
+
+.dashboard-row {
+  background-color: red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: -20px;
 }
