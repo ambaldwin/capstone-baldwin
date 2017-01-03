@@ -67,5 +67,4 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
         })
     }
 
-
 })

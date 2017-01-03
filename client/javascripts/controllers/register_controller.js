@@ -70,5 +70,4 @@ app.controller('RegisterController', function($scope, $location, $cookies, regis
         })
     }
 
-
 })

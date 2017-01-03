@@ -14,8 +14,4 @@ app.config(function ($routeProvider) {
             templateUrl: '../views/restaurant.html',
             controller: 'RestaurantController'
         })
-        .when('/about', {
-            templateUrl: '../views/about.html'
-            // controller: 'ProfileController'
-        })
 })
