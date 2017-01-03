@@ -21,9 +21,10 @@
     <script src="./javascripts/controllers/main_controller.js"></script>
     <script src="./javascripts/controllers/register_controller.js"></script>
     <script src="./javascripts/controllers/restaurant_controller.js"></script>
+    <script src="./javascripts/controllers/stripe_controller.js"></script>
 
     <!-- directives -->
-    <!-- <script src="./javascripts/directives/socket.js"></script> -->
+    <script src="./javascripts/directives/stripe.js"></script>
 
     <!-- services -->
     <script src="./javascripts/services/register_service.js"></script>
@@ -46,6 +47,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- stripe -->
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <script type="text/javascript">
+      Stripe.setPublishableKey('sk_test_81b58ufCwXZuIjDQ7LUiu7kX');
+    </script>
 
 </body>
 

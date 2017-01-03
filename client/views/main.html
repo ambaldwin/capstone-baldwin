@@ -7,7 +7,7 @@
     </button>
 
     <ul class="dropdown-menu dropdown-menu-right">
-      <div>
+      <div class="cart">
           <h2>Shopping Cart</h2>
 
           <ul ng-repeat="meal in shoppingCart">
@@ -15,11 +15,13 @@
           </ul>
           <p><strong>Tax:</strong> {{totalTax | currency}}</p>
           <p><strong>Total Cost:</strong> {{totalCost | currency}}</p>
-          <button type="button" name="button">Order</button>
+          <button type="button" data-toggle="modal" data-target="#myModal">Order</button>
       </div>
     </ul>
   </div>
 </nav>
+
+<stripe-directive></stripe-directive>
 
 <div class="jumbotron">
   <div class="row jumbo-row">
@@ -35,8 +37,9 @@
       </div>
       <br>
       <h3><strong>pounds saved this year: {{pounds}} lbs</strong></h3>
-
     </div>
+
+
 
     <iframe class="col-xs-6" height="500" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
 

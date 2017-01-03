@@ -46,6 +46,11 @@ div.jumbotron-left {
   font-family: 'PT Sans', sans-serif;
 }
 
+/*shopping cart*/
+.cart {
+  width: 400px;
+  height: 300px;
+}
 
 /*main body of main page*/
 .container {
