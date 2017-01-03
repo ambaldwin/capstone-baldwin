@@ -2,9 +2,6 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 
-// var TWILIO_ACCOUNT_SID = process.env.ACCOUNTS_ID
-// var TWILIO_AUTH_TOKEN = process.env.AUTH_TOKEN
-
 //require the Twilio module
 var client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
