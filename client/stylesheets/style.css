@@ -1,4 +1,9 @@
 /*home page*/
+
+div.ng-scope {
+  background-color: green;
+}
+
 nav.navbar {
   height: 80px;
 }
@@ -9,14 +14,25 @@ img.logo {
 }
 
 .dropdown {
-  margin-top: 20px;
+  margin-top: 16px;
+  padding-right: 80px;
+}
+
+#dropdownMenu1 {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  border: none;
+  font-size: 18px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 /*jumbotron*/
 div.jumbotron {
-  margin-top: -15px;
+  margin-top: -20px;
   height: 500px;
-  background-color: green;
+  background-color: white;
+  border-bottom: 10px solid red;
 }
 
 div.row.jumbo-row {
@@ -26,13 +42,15 @@ div.row.jumbo-row {
 
 div.jumbotron-left {
   padding-left: 150px;
-  padding-top: 50px;
+  padding-top: 80px;
   font-family: 'PT Sans', sans-serif;
 }
+
 
 /*main body of main page*/
 .container {
   align-self: center;
+  background-color: blue;
 }
 
 .container-fluid {
@@ -42,6 +60,7 @@ div.jumbotron-left {
 .left-column {
   height: 2000px;
 }
+
 
 /*restaurant dashboard*/
 .rest-image {

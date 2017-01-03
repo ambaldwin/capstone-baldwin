@@ -1,5 +1,10 @@
 var express = require('express');
 var path = require('path');
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({path: __dirname + '/.env' });
+}
+
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');

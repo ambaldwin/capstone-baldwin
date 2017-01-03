@@ -20,5 +20,8 @@
     "pg": "^6.1.2",
     "serve-favicon": "~2.3.0",
     "twilio": "^2.11.1"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
   }
 }

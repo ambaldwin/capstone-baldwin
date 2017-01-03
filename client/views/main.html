@@ -1,11 +1,12 @@
 <nav class="navbar navbar-inverse">
   <img src="./stylesheets/logo2-hamb.png" class="logo col-xs-12 col-md-8" alt="Leftover Log Logo"/>
 
-  <div class="dropdown">
+  <div class="dropdown navbar-right">
     <button type="button" class="btn btn-default btn-md dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Shopping Cart ({{shoppingCart.length}})
+      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Shopping Cart [ {{shoppingCart.length}} ]
     </button>
-    <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+
+    <ul class="dropdown-menu dropdown-menu-right">
       <div>
           <h2>Shopping Cart</h2>
 
@@ -23,12 +24,17 @@
   <div class="row jumbo-row">
     <div class="jumbotron-left col-xs-6">
       <h1>let's save our food.</h1>
-      <p>pounds saved this year: {{pounds}}</p>
-      <div class="btn-box col-xs-6 col-md-4">
+      <br>
+      <p>Each meal purchased saves valuable food from going to waste.</p>
+      <div class="btn-box row">
+          <p>
+            how does it work? your local restaurants post extra meals that would otherwise be thrown away at the end of each night. Simply sign-up, and then choose the food of your choice. Easy!
+          </p>
           <a href="#/register" class="btn btn-default navbar-btn">SIGN UP | LOG IN</a>
-          <br>
-          <a href="#/about" class="btn btn-default navbar-btn">About Us</a>
       </div>
+      <br>
+      <h3><strong>pounds saved this year: {{pounds}} lbs</strong></h3>
+
     </div>
 
     <iframe class="col-xs-6" height="500" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
@@ -47,7 +53,7 @@
         </div>
 
         <!-- available meals list -->
-        <div ng-repeat="meal in view.mealsArray" class="col-xs-12 col-md-8 panel panel-default">
+        <div ng-repeat="meal in view.mealsArray" class="col-xs-12 col-md-4 panel panel-default">
             <div class="panel-body">
                 <div class="media">
                     <div class="media-body">
