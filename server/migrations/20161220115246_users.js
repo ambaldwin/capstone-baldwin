@@ -6,7 +6,6 @@ exports.up = function(knex) {
     table.string('email').unique()
     table.specificType('hash', 'character(60)')
     table.string('phone')
-    table.string('image')
     table.timestamps(true, true);
   });
 };

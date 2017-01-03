@@ -1,4 +1,4 @@
-app.controller('RestaurantController', function($scope, $route, $cookies, mainService, editService) {
+app.controller('RestaurantController', function($scope, $route, $cookies, mainService, editService, smsService) {
 
     let cookie = $cookies.getObject('loggedin')
     let id = cookie.id
@@ -54,7 +54,7 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
     }
 
     //marking a meal ready
-    $scope.markReady = function(restaurant) {
+    $scope.markReady = function(restaurant, meal) {
 
         //function to delete meal from database // mark red as in already ordered
 
@@ -62,6 +62,9 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
         addPounds(restaurant)
 
         //send text message to user, twillio stuff
+        smsService.sms(meal).then(function(results) {
+          console.log(results.data);
+        })
     }
 
 

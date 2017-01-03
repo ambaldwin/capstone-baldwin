@@ -78,7 +78,7 @@
                   <th>Delete</th>
                 </tr>
                 <tr>
-                  <td><button ng-show="meal.user_id !== null" ng-click="markReady(restaurant)">Ready!</button></td>
+                  <td><button ng-show="meal.user_id !== null" ng-click="markReady(restaurant, meal)">Ready!</button></td>
                   <td>{{meal.mealName}}</td>
                   <td>{{meal.price | currency}}</td>
                   <td>{{meal.pickup}}</td>
