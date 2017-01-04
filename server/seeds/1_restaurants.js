@@ -58,7 +58,7 @@ exports.seed = function(knex) {
           username: 'jaxfishhouse',
           email: 'jax@gmail.com',
           hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
-          image: 'http://friendsofpastajay.com/wp-content/uploads/2010/05/pj2.jpg',
+          image: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSh3tlvlh1n_heodjHACoxIOyMvR9PWXmVzUrftHrecY1SOzgQtSA',
           pounds: 2200,
           phone: '3082365594',
           address: '928 Pearl St',

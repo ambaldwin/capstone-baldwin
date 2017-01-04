@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
       for (var i = 0; i < restaurants.length; i++) {
         sum += restaurants[i].pounds
       }
-      res.json(sum)
+      res.json({restaurants: restaurants, pounds: sum})
     })
 })
 

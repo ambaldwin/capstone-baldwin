@@ -138,6 +138,21 @@ div.col-xs-12.col-md-4.panel.panel-default {
   margin-bottom: 1px;
 }
 
+div.col-md-12.panel.panel-default {
+  height: 200px;
+  background-color: white;
+}
+
+.main-image {
+  margin-top: -30px;
+  height: 170px;
+  width: 150px;
+}
+
+.sortBox {
+  margin-left: 20px;
+}
+
 /*restaurant dashboard*/
 .rest-image {
   height: 200px;

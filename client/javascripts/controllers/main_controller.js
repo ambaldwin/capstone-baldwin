@@ -1,17 +1,21 @@
 app.controller('MainController', function($scope, $routeParams, $location, $cookies, mainService, editService) {
 
     $scope.view = {};
+    $scope.view.search = '';
 
     let cookie = $cookies.getObject('loggedin')
 
     $scope.user = cookie
 
     mainService.meals().then(function(returnedMeals) {
+      console.log(returnedMeals.data);
         $scope.view.mealsArray = returnedMeals.data
     })
 
-    editService.calculate().then(function(returnedPounds) {
-        $scope.pounds = returnedPounds.data
+    editService.calculate().then(function(returned) {
+        $scope.view.restArray = returned.data.restaurants
+
+        $scope.pounds = returned.data.pounds
     })
 
     $scope.updateMeal = function(meal) {
