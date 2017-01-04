@@ -84,7 +84,20 @@ p.works {
 .cart {
   width: 400px;
   height: 300px;
+  font-family: 'PT Sans', sans-serif;
+  border-bottom: 10px solid #32CD32;
+  border-top: 10px solid #32CD32;
 }
+
+small {
+  color: red;
+  padding-left: 4px;
+}
+
+div.cart {
+  text-align: center;
+}
+
 
 /*main body of main page*/
 .container {

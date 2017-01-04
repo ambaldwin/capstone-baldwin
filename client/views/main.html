@@ -8,14 +8,14 @@
 
     <ul class="dropdown-menu dropdown-menu-right">
       <div class="cart">
-          <h2>Shopping Cart</h2>
+        <h2>Shopping Cart</h2>
 
-          <ul ng-repeat="meal in shoppingCart">
-              <strong>{{meal.mealName}}</strong>, {{meal.price | currency}}
-          </ul>
-          <p><strong>Tax:</strong> {{totalTax | currency}}</p>
-          <p><strong>Total Cost:</strong> {{totalCost | currency}}</p>
-          <button type="button" data-toggle="modal" data-target="#myModal">Order</button>
+        <ul class="panel panel-default" ng-repeat="meal in shoppingCart">
+            <strong>{{meal.mealName}}</strong>, {{meal.price | currency}} <small>   X</small>
+        </ul>
+        <p><strong>Tax:</strong> {{totalTax | currency}}</p>
+        <p><strong>Total Cost:</strong> {{totalCost | currency}}</p>
+        <button type="button" data-toggle="modal" data-target="#myModal">Checkout</button>
       </div>
     </ul>
   </div>
