@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 
-router.put('/', (req, res, next) => {
+router.post('/', (req, res, next) => {
   console.log('in the stripe route');
   console.log('req.body:', req.body);
   // let updatedMeal = req.body
