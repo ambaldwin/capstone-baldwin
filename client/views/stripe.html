@@ -12,30 +12,29 @@
 
                     <div class="form-row">
                         <label>
-                            <span>Card Number</span>
+                            <span>Card Number:</span><br>
                             <input type="text" size="20" ng-model="stripeForm.number" data-stripe="number">
                         </label>
                     </div>
 
                     <div class="form-row">
                         <label>
-                            <span>Expiration (MM/YY)</span>
+                            <span>Expiration (MM/YY):</span><br>
                             <input type="text" size="2" ng-model="stripeForm.exp_month" data-stripe="exp_month">
+                            <input type="text" size="2" ng-model="stripeForm.exp_year" data-stripe="exp_year">
                         </label>
-                        <span> / </span>
-                        <input type="text" size="2" ng-model="stripeForm.exp_year" data-stripe="exp_year">
                     </div>
 
                     <div class="form-row">
                         <label>
-                            <span>CVC</span>
+                            <span>CVC:</span><br>
                             <input type="text" size="4" ng-model="stripeForm.cvc" data-stripe="cvc">
                         </label>
                     </div>
 
-                    <button type="submit" class="btn btn-default center-block submit">Submit</button>
+                    <button type="submit" ng-click="showSuccess = !showSuccess" class="btn btn-default center-block submit">Submit</button>
+                    <span ng-show="showSuccess" class="glyphicon glyphicon-ok"> Success!</span>
                 </form>
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>

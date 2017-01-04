@@ -80,7 +80,7 @@ p.works {
   margin-top: 35px;
 }
 
-/*shopping cart*/
+/*shopping cart and CC modal*/
 .cart {
   width: 400px;
   height: 300px;
@@ -96,6 +96,11 @@ small {
 
 div.cart {
   text-align: center;
+}
+
+span.glyphicon.glyphicon-ok {
+  color: green;
+  font-size: 20px;
 }
 
 
