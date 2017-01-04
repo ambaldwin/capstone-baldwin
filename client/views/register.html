@@ -2,7 +2,7 @@
   <img src="./stylesheets/logo2-hamb.png" class="logo col-xs-12 col-md-8" alt="Leftover Log Logo"/>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid register-container">
     <button type="button" name="button" class="btn btn-default center-block" ng-click="showRestaurant = !showRestaurant; clearForm()">If you're a restaurant</button>
 
     <br>
@@ -11,6 +11,7 @@
 
     <!-- login form for users -->
     <form name="userLogIn" ng-submit="submitUserLog(returningUser)" ng-show="showEater">
+        <h3>Log In:</h3>
         <div class="form-group" ng-class="{'has-error' : userLogIn.username.$invalid && !userLogIn.username.$pristine,'has-success' : userLogIn.username.$valid }">
             <label class="control-label" for="username">Username:</label>
             <input type="text" name="username" class="form-control" ng-model="returningUser.username" ng-minlength="2" ng-maxlength="30" ng-required="true" placeholder="Username">
@@ -28,6 +29,7 @@
 
     <!-- signup form for users -->
     <form name="userSignUp" ng-submit="submitUserSignUp(newUser, userSignUp)" ng-show="showEater">
+      <h3>Sign Up:</h3>
         <div class="form-group" ng-class="{'has-error' : userSignUp.name.$invalid && !userSignUp.name.$pristine,'has-success' : userSignUp.name.$valid }">
             <label class="control-label" for="name">Name:</label>
             <input type="text" name="name" class="form-control" ng-model="newUser.name" ng-minlength="2" ng-maxlength="40" ng-required="true" placeholder="Name">
@@ -67,6 +69,7 @@
 
     <!-- login form for restaurants -->
     <form name="logIn" ng-submit="submitLogIn(returningUser)" ng-show="showRestaurant">
+      <h3>Log In</h3>
         <div class="form-group" ng-class="{'has-error' : logIn.username.$invalid && !logIn.username.$pristine,'has-success' : logIn.username.$valid }">
             <label class="control-label" for="username">Username:</label>
             <input type="text" name="username" class="form-control" ng-model="returningUser.username" ng-minlength="2" ng-maxlength="30" ng-required="true" placeholder="Username">
@@ -86,6 +89,7 @@
 
     <!-- sign-up form for restaurants -->
     <form id="signUp" name="signUp" ng-submit="submitSignUp(newUser,signUp)" ng-show="showRestaurant">
+      <h3>Sign Up</h3>
         <div class="form-group" ng-class="{'has-error' : signUp.name.$invalid && !signUp.name.$pristine,'has-success' : signUp.name.$valid }">
             <label class="control-label" for="name">Restaurant Name:</label>
             <input type="text" name="name" class="form-control" ng-model="newUser.name" ng-minlength="2" ng-maxlength="40" ng-required="true" placeholder="Name">

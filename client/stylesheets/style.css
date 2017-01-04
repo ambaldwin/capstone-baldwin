@@ -127,9 +127,10 @@ media-body.h3.strong {
 div.col-xs-12.col-md-4.panel.panel-default {
   background-color: white;
   font-family: 'PT Sans', sans-serif;
-  height: 320px;
+  height: 300px;
   position: relative;
   align-items: center;
+  margin-bottom: 1px;
 }
 
 
@@ -139,9 +140,38 @@ div.col-xs-12.col-md-4.panel.panel-default {
   height: 200px;
 }
 
+div.container.row.dashboard-row {
+  height: 270px;
+  background-color: white;
+  width: 100%;
+}
+
 .dashboard-row {
-  background-color: red;
+  background-color: #f2f2f2;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: -20px;
+  border-bottom: 2px solid black;
+}
+
+div.col-lg-10.col-lg-offset-1.col-md-10.col-md-offset.panel.panel-default.meals {
+  background-color: white;
+}
+
+address {
+  margin-top: 10px;
+}
+
+h3.saved {
+  margin-top: 30px;
+}
+
+div.col-md-2.features {
+  align-items: center;
+  background-color: #E6E6FA;
+}
+
+/*register page*/
+div.container-fluid.register-container {
+  width: 1000px;
 }
