@@ -1,5 +1,8 @@
 <nav class="navbar navbar-inverse">
     <img src="./stylesheets/logo2-hamb.png" class="logo col-xs-12 col-md-8" alt="Leftover Log Logo" />
+    <div class="dropdown navbar-right">
+      <a href="#/logout" class="btn btn-default btn-md btn-log" role="button">Log Out</a>
+    </div>
 </nav>
 
 <div class="row container dashboard-row">
@@ -9,14 +12,15 @@
 
     <div class="col-md-6">
         <h2>Welcome, {{restaurant.name}}!</h2>
+        <hr>
         <address>
                 {{restaurant.address}}
                 {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip}}<br>
               <abbr title="Phone">P:</abbr> {{restaurant.phone}}
             </address>
         <button type="button" name="button" class="btn btn-default" ng-click="showAddMeal = !showAddMeal; clearForm()">Add New Meal</button>
-        <br>
-        <h3 class="saved">Pounds saved: {{pounds}}</h3>
+        <hr>
+        <h3 class="saved">Total number of pounds of food saved: {{pounds}}</h3>
     </div>
 
     <div class="col-md-2 features">
@@ -34,7 +38,7 @@
 
 
     <div class="row">
-
+      <br>
         <!-- form for adding a new meal -->
         <form name="addedMeal" ng-submit="addMeal(meal)" ng-show="showAddMeal">
             <div class="form-group" ng-class="{'has-error' : addedMeal.name.$invalid && !addedMeal.name.$pristine,'has-success' : addedMeal.name.$valid }">

@@ -1,7 +1,7 @@
 /*home page*/
 
 div.ng-scope {
-  background-color: #32CD32;
+  background-color: #99ff99;
 }
 
 nav.navbar.navbar-inverse {
@@ -85,8 +85,8 @@ p.works {
   width: 400px;
   height: 300px;
   font-family: 'PT Sans', sans-serif;
-  border-bottom: 10px solid #32CD32;
-  border-top: 10px solid #32CD32;
+  border-bottom: 10px solid #99ff99;
+  border-top: 10px solid #99ff99;
 }
 
 small {
@@ -138,11 +138,11 @@ div.col-xs-12.col-md-4.panel.panel-default {
   margin-bottom: 1px;
 }
 
-
-
 /*restaurant dashboard*/
 .rest-image {
   height: 200px;
+  margin-left: 100px;
+  margin-top: 10px;
 }
 
 div.container.row.dashboard-row {
@@ -153,7 +153,6 @@ div.container.row.dashboard-row {
 
 .dashboard-row {
   background-color: #f2f2f2;
-  padding-top: 20px;
   padding-bottom: 20px;
   margin-top: -20px;
   border-bottom: 2px solid black;
@@ -164,19 +163,29 @@ div.col-lg-10.col-lg-offset-1.col-md-10.col-md-offset.panel.panel-default.meals 
 }
 
 address {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 h3.saved {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 div.col-md-2.features {
   align-items: center;
   background-color: #E6E6FA;
+  padding-top: 20px;
+}
+
+a.btn.btn-default.btn-md.btn-log {
+  margin-top: 10px;
 }
 
 /*register page*/
 div.container-fluid.register-container {
   width: 1000px;
+}
+
+div.container-fluid.logout-container {
+  height: 700px;
+  width: 100%
 }

@@ -2,6 +2,10 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
 
     $scope.view = {};
 
+    let cookie = $cookies.getObject('loggedin')
+
+    $scope.user = cookie
+
     mainService.meals().then(function(returnedMeals) {
         $scope.view.mealsArray = returnedMeals.data
     })

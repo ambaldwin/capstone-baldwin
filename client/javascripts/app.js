@@ -15,8 +15,8 @@ app.config(function ($routeProvider, stripeProvider) {
             templateUrl: '../views/restaurant.html',
             controller: 'RestaurantController'
         })
+        .when('/logout', {
+            templateUrl: '../views/logout.html',
+            controller: 'LogOutController'
+        })
 })
-
-// app.config(function (stripeProvider) {
-//     stripeProvider.setPublishableKey('sk_test_81b58ufCwXZuIjDQ7LUiu7kX');
-//   });

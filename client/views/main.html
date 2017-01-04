@@ -5,6 +5,7 @@
     <button type="button" class="btn btn-default btn-md dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
       <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Shopping Cart [ {{shoppingCart.length}} ]
     </button>
+    <a href="#/logout" ng-hide="user.id === null" class="btn btn-default btn-md" role="button">Log Out</a>
 
     <ul class="dropdown-menu dropdown-menu-right">
       <div class="cart">

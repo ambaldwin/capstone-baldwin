@@ -38,7 +38,85 @@ exports.seed = function(knex) {
         address: '926 Pearl Street',
         city: 'Boulder',
         state: 'CO',
-        zip: 80302
-      }]);
+        zip: 80302,
+        },
+        {
+          name: 'Pasta Jays',
+          username: 'pastajays',
+          email: 'pasta@gmail.com',
+          hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          image: 'http://friendsofpastajay.com/wp-content/uploads/2010/05/pj2.jpg',
+          pounds: 2800,
+          phone: '3082365594',
+          address: '1001 Pearl St',
+          city: 'Boulder',
+          state: 'CO',
+          zip: 80302
+        },
+        {
+          name: 'Jax Fish House',
+          username: 'jaxfishhouse',
+          email: 'jax@gmail.com',
+          hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          image: 'http://friendsofpastajay.com/wp-content/uploads/2010/05/pj2.jpg',
+          pounds: 2200,
+          phone: '3082365594',
+          address: '928 Pearl St',
+          city: 'Boulder',
+          state: 'CO',
+          zip: 80302
+        },
+        {
+          name: 'Arcana',
+          username: 'arcana',
+          email: 'arcana@gmail.com',
+          hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIsPA3kppjNmGnEcW378mARQz7aa6Uwf9yXDvVZkrpAYsGAdKx',
+          pounds: 2100,
+          phone: '3082365594',
+          address: '909 Walnut St',
+          city: 'Boulder',
+          state: 'CO',
+          zip: 80302
+        },
+        {
+          name: 'The Mediterranean Restaurant',
+          username: 'med',
+          email: 'med@gmail.com',
+          hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHgrHYEpOBU7LYi51RDEIEHsDRClTyEWSLzp9YcFsXs4iFQlIb',
+          pounds: 2100,
+          phone: '3082365594',
+          address: '1002 Walnut S',
+          city: 'Boulder',
+          state: 'CO',
+          zip: 80302
+        },
+        {
+          name: 'Taco',
+          username: 'taco',
+          email: 'taco@gmail.com',
+          hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FvufpkFKeul0RGE3-10v0EBHrWeVECtNcmP03WFpd96fF08l',
+          pounds: 2100,
+          phone: '3082365594',
+          address: '1175 Walnut St',
+          city: 'Boulder',
+          state: 'CO',
+          zip: 80302
+        },
+        {
+          name: 'Pizzeria Locale',
+          username: 'pizzeria',
+          email: 'pizzeria@gmail.com',
+          hash: '$2a$12$C9AYYmcLVGYlGoO4vSZTPud9ArJwbGRsJ6TUsNULzR48z8fOnTXbS',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSUzunonZHq89hbBvrVEhB341oyHHBcFM2xjLkcdMH95aVdbLMHg',
+          pounds: 2100,
+          phone: '3082365594',
+          address: '1730 Pearl St',
+          city: 'Boulder',
+          state: 'CO',
+          zip: 80302
+        }]);
     });
 };
