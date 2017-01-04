@@ -27,20 +27,19 @@
 <div class="jumbotron">
   <div class="row jumbo-row">
     <div class="jumbotron-left col-xs-6">
-      <h1>let's save our food.</h1>
-      <br>
-      <p>Each meal purchased saves valuable food from going to waste.</p>
-      <div class="btn-box row">
-          <p>
-            how does it work? your local restaurants post extra meals that would otherwise be thrown away at the end of each night. Simply sign-up, and then choose the food of your choice. Easy!
+      <h1>let's save our food,</h1>
+      <h2 class="eachMeal">one leftover at a time.</h2>
+      <div class="row">
+          <p class="works">
+            Delicious food from your local restaurants.<br>
+            A text message lets you know when it's ready. <strong>Easy.</strong>
           </p>
-          <a href="#/register" class="btn btn-default navbar-btn">SIGN UP | LOG IN</a>
       </div>
-      <br>
-      <h3><strong>pounds saved this year: {{pounds}} lbs</strong></h3>
+      <a href="#/register" class="btn btn-default login center-block">SIGN UP | LOG IN</a>
+      <h2 class="pounds"><strong>pounds of food saved this year: {{pounds}}</strong></h2>
     </div>
 
-    <iframe class="col-xs-6" height="500" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
+    <iframe class="col-xs-6" height="560" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -58,15 +57,18 @@
             <div class="panel-body">
                 <div class="media">
                     <div class="media-body">
-                        <h2>{{meal.mealName}}</h2>
-                        <h3>{{meal.price | currency}}</h3>
-                        <h3><strong>{{meal.name}}</strong></h3>
+                        <h3><strong>{{meal.mealName}}</strong></h3>
+                        <h4>{{meal.price | currency}}</h4>
+                        <h4><strong>{{meal.name}}</strong></h4>
                         <p>{{meal.details}}</p>
                     </div>
-                    <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}} | <small>  {{meal.dietary}}</small></div>
+                    <div class="pull-left text-center"><strong>Pick-up:</strong> {{meal.pickup}}<br>
+                      {{meal.dietary}}</div>
                     <br>
-                    <button ng-show="meal.user_id == null" ng-click="addItem(meal); updateMeal(meal)">Add To Cart</button>
-                    <button ng-show="meal.user_id !== null" ng-disabled="true">Ordering...</button>
+                    <div class="panel-footer">
+                      <button class="toOrder btn btn-default" ng-show="meal.user_id == null" ng-click="addItem(meal); updateMeal(meal)">Add To Cart</button>
+                      <button ng-show="meal.user_id !== null" ng-disabled="true">Ordering...</button>
+                    </div>
                 </div>
             </div>
         </div>

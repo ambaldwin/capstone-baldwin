@@ -1,20 +1,22 @@
 /*home page*/
 
 div.ng-scope {
-  background-color: green;
+  background-color: #32CD32;
 }
 
-nav.navbar {
-  height: 80px;
+nav.navbar.navbar-inverse {
+  height: 100px;
+  background-color: black !important;
+  border-bottom: 1px grey solid;
 }
 
 img.logo {
   width: 400px;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .dropdown {
-  margin-top: 16px;
+  margin-top: 20px;
   padding-right: 80px;
 }
 
@@ -30,20 +32,52 @@ img.logo {
 /*jumbotron*/
 div.jumbotron {
   margin-top: -20px;
-  height: 500px;
-  background-color: white;
-  border-bottom: 10px solid red;
+  height: 560px;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid grey;
 }
 
 div.row.jumbo-row {
-  height: 500px;
+  height: 560px;
   margin-top: -48px;
 }
 
 div.jumbotron-left {
   padding-left: 150px;
-  padding-top: 80px;
+  padding-top: 60px;
   font-family: 'PT Sans', sans-serif;
+}
+
+h2.eachMeal {
+  color: #32CD32;
+  margin-top: -20px;
+  margin-left: 3px;
+  letter-spacing: 0.07em;
+}
+
+a.btn-default.login.center-block {
+  color: #32CD32;
+  width: 200px;
+  margin-top: 25px;
+}
+
+h2.pounds {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+p.works {
+  margin-left: 50px;
+  font-family: 'PT Sans', sans-serif;
+  height: 100px;
+  width: 500px;
+  padding-right: 8px;
+  padding-left: 13px;
+  padding-top: 20px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 3px 0 2px -3px black;
+  margin-top: 35px;
 }
 
 /*shopping cart*/
@@ -63,8 +97,28 @@ div.jumbotron-left {
 }
 
 .left-column {
-  height: 2000px;
+  height: 1000px;
 }
+
+div.panel-footer {
+  vertical-align: bottom;
+  position: absolute;
+  bottom: 0;
+  align-items: center
+}
+
+media-body.h3.strong {
+  text-color: #32CD32;
+}
+
+div.col-xs-12.col-md-4.panel.panel-default {
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+  height: 320px;
+  position: relative;
+  align-items: center;
+}
+
 
 
 /*restaurant dashboard*/
