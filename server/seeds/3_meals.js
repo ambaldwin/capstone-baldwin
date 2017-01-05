@@ -12,7 +12,7 @@ exports.seed = function(knex) {
       },
       {
         restaurant_id: 1,
-        user_id: 1,
+        user_id: null,
         name: 'Lamb & Oat Meatloaf',
         details: 'Triple m bar ranch lamb, grassfed beef, Elevation ketchup, pumpkin seed pesto, sweet potato bites.',
         dietary: 'gluten-free options',
