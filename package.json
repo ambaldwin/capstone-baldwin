@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "knex": "knex",
-    "nodemon": "node ./server/bin/www",
-    "start": "node ./server/bin/www"
+    "nodemon": "node ./server/app.js",
+    "start": "node ./server/app.js",
+    "heroku-postbuild": "knex migrate:latest --knexfile ./server/knexfile.js"
   },
   "dependencies": {
     "angular": "^1.5.0",
@@ -24,7 +25,11 @@
     "serve-favicon": "~2.3.0",
     "twilio": "^2.11.1"
   },
+  "engines": {
+    "node": "v6.3.1"
+  },
   "devDependencies": {
-    "dotenv": "^2.0.0"
+    "dotenv": "^2.0.0",
+    "foreman": "^2.0.0"
   }
 }
