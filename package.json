@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "knex": "knex",
-    "nodemon": "node ./server/app.js",
-    "start": "node ./server/app.js",
+    "nodemon": "node ./server/bin/www",
+    "start": "node ./server/bin/www",
     "heroku-postbuild": "knex migrate:latest --knexfile ./server/knexfile.js"
   },
   "dependencies": {
