@@ -18,7 +18,8 @@ router.post('/', (req, res, next) => {
             from: "+13083650826",
             body: "Your meal purchased through LEFTOVER LOVE is ready for pickup!",
         }, function(err, message) {
-            console.log(message.sid);
+            console.log(message);
+            console.log(err);
         });
       })
 
