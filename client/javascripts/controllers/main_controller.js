@@ -13,7 +13,6 @@ app.controller('MainController', function($scope, $route, $location, $cookies, m
 
     editService.calculate().then(function(returned) {
         $scope.view.restArray = returned.data.restaurants
-        console.log('returned:', returned.data.restaurants);
 
         $scope.pounds = returned.data.pounds
     })

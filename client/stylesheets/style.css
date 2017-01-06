@@ -133,7 +133,7 @@ div.col-xs-12.col-md-4.panel.panel-default {
 }
 
 div.col-md-12.panel.panel-default {
-  height: 180px;
+  height: 188px;
   font-family: 'PT Sans', sans-serif;
   background-color: #FDFEFE;
   margin-top: -10px;
@@ -141,6 +141,11 @@ div.col-md-12.panel.panel-default {
 
 div.media-body.restaurant {
   padding-left: 70px;
+}
+
+h3.featured {
+  margin-bottom: 30px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .main-image {
@@ -151,12 +156,24 @@ div.media-body.restaurant {
 
 div.panel.facts {
   background-color: #FDFEFE;
-  margin-top: -20px;
+  margin-top: -10px;
   font-family: 'PT Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+strong.bolder {
+  color: orange;
+  line-height: 2px;
+}
+
+h2.indent {
+  margin-left: 30px;
+  line-height: 2px;
 }
 
 .sortBox {
   margin-left: 20px;
+  margin-top: 20px;
 }
 
 div.row.main {

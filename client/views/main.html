@@ -5,7 +5,7 @@
     <button type="button" class="btn btn-default btn-md dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
       <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Shopping Cart [ {{shoppingCart.length}} ]
     </button>
-    <a href="#/" ng-show="user.name === null" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a>
+    <a href="#/" ng-show="user.id !== null" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a>
 
     <ul class="dropdown-menu dropdown-menu-right">
       <div class="cart">
@@ -58,16 +58,18 @@
             <option value="-votes">Restaurant</option>
             <option value="date">Price</option>
           </select>
+          <br>
           <hr>
 
           <div class="panel facts">
-            <h3>More than...</h3>
-            <h2><strong>$160 billion</strong><small>is wasted each year.</small></h2>
-             <h2><small>That's</small><strong> 40%</strong><small>of all food produced!</small></h2>
-            <h2><small>Or,</small><strong> 20 lbs</strong><small> per person per month!</small></h2>
+            <h1>More than...</h1>
+            <h2 class="indent"><strong class="bolder">$160 billion</strong><small>wasted each year.</small></h2>
+             <h2 class="indent"><small>That's</small><strong class="bolder"> 40%</strong><small>of all food produced!</small></h2>
+            <h2 class="indent"><small>Or,</small><strong class="bolder"> 20 lbs</strong><small> per person per month!</small></h2>
+              <hr>
           </div>
 
-          <h3>Featured Restaurants:</h3>
+          <h3 class="featured"><strong>Featured Restaurants:</strong></h3>
           <div ng-repeat="rest in view.restArray" class="col-md-12 panel panel-default">
             <div class="panel-body">
                 <div class="media center-block">

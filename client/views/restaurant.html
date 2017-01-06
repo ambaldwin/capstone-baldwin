@@ -18,10 +18,8 @@
                 {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip}}<br>
               <abbr title="Phone">P:</abbr> {{restaurant.phone}}
             </address>
-        <button type="button" name="button" class="btn btn-default" ng-click="showAddMeal = !showAddMeal; clearForm()">Add New Meal</button>
-        <p>
-          {{text}}
-        </p>
+        <button type="button" name="button" class="btn btn-default" ng-click="showAddMeal = !showAddMeal; clearForm()">Add New Meal</button> <button type="button" name="button" ng-click="addPounds(restaurant)">{{text}}</button>
+
         <hr>
         <h3 class="saved">Total number of pounds of food saved: {{pounds | number}}</h3>
     </div>

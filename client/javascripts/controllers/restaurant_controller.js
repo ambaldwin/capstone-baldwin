@@ -51,21 +51,19 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
       restaurant.pounds += 2
       mainService.pounds(restaurant).then(function() {})
       $route.reload();
+      $scope.text = 'Text message sent to buyer.'
     }
 
     //marking a meal ready
     $scope.markReady = function(restaurant, meal) {
-
-        //function to delete meal from database // mark red as in already ordered
 
         //function to increment lbs for restaurant
         addPounds(restaurant)
 
         //send text message to user, twillio stuff
         smsService.sms(meal).then(function(results) {
+          $scope.text = 'Text message sent to buyer.'
         })
-
-        // $scope.text="Success: text message sent to buyer."
 
     }
 
