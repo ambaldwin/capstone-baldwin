@@ -5,7 +5,7 @@
     <button type="button" class="btn btn-default btn-md dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
       <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Shopping Cart [ {{shoppingCart.length}} ]
     </button>
-    <a href="#/" ng-show="{{user.name}}" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a>
+    <!-- <a href="#/" ng-show="{{user.name}}" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a> -->
 
     <ul class="dropdown-menu dropdown-menu-right">
       <div class="cart">
@@ -37,7 +37,7 @@
           </p>
       </div>
       <a href="#/register" class="btn btn-default login center-block btn-lg">SIGN UP | LOG IN</a>
-      <h2 class="pounds"><strong>Pounds of food saved this year: {{pounds | number}}</strong></h2>
+      <h2 class="pounds">Pounds of food saved this year: <strong>  {{pounds | number}}</strong></h2>
     </div>
 
     <iframe class="col-xs-6" height="560" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>

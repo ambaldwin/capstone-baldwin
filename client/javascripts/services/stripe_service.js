@@ -1,7 +1,8 @@
 app.service('stripeService', function ($http) {
   return {
     sendToken: function(token) {
-      return $http.post('./striped', token);
+      console.log('service');
+      return $http.get(`./striped/${token}`);
     }
   }
 })

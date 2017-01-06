@@ -2,23 +2,27 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 
-var stripe = require('stripe')("pk_test_wPXGgL5xnqlSQ0j6QAksPPww");
+var stripe = require('stripe')("sk_test_81b58ufCwXZuIjDQ7LUiu7kX");
 
-router.post('/', (req, res, next) => {
-    var token = req.body.token;
-    var amount = req.body.amount
-    
+router.get('/:id', (req, res, next) => {
+
+  console.log('in the stripe route');
+  console.log('req.params:', req.params);
+    var token = req.params.id;
+
     // Create a charge: this will charge the user's card
     var charge = stripe.charges.create({
-        amount: amount, // Amount in cents
+        amount: 471, // Amount in cents
         currency: "usd",
         source: token,
-        description: "Example charge"
+        description: "Leftover Love meal"
     }, function(err, charge) {
         if (err && err.type === 'StripeCardError') {
             // The card has been declined
         }
     });
+
+    console.log('charge:', charge);
 
 
 })
