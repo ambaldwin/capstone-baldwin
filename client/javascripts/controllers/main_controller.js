@@ -1,4 +1,4 @@
-app.controller('MainController', function($scope, $routeParams, $location, $cookies, mainService, editService) {
+app.controller('MainController', function($scope, $route, $location, $cookies, mainService, editService) {
 
     $scope.view = {};
     $scope.view.search = '';
@@ -13,6 +13,7 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
 
     editService.calculate().then(function(returned) {
         $scope.view.restArray = returned.data.restaurants
+        console.log('returned:', returned.data.restaurants);
 
         $scope.pounds = returned.data.pounds
     })
@@ -59,5 +60,11 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
         $scope.totalTax = taxSum
         $scope.totalCost = sum + taxSum;
     }
+
+    //logout
+    $scope.logout = function() {
+            $cookies.remove('loggedin')
+            $route.reload();
+        }
 
 });

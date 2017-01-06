@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
     <img src="./stylesheets/logo2-hamb.png" class="logo col-xs-12 col-md-8" alt="Leftover Log Logo" />
     <div class="dropdown navbar-right">
-      <a href="#/logout" class="btn btn-default btn-md btn-log" role="button">Log Out</a>
+      <a href="#/" ng-show="{{restaurant.name}}" ng-click="logout()" class="btn btn-default btn-md btn-log" role="button">Log Out</a>
     </div>
 </nav>
 
@@ -23,7 +23,7 @@
           {{text}}
         </p>
         <hr>
-        <h3 class="saved">Total number of pounds of food saved: {{pounds}}</h3>
+        <h3 class="saved">Total number of pounds of food saved: {{pounds | number}}</h3>
     </div>
 
     <div class="col-md-2 features">

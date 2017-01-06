@@ -69,5 +69,11 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
 
     }
 
+    //logout
+    $scope.logout = function() {
+            $cookies.remove('loggedin')
+            $route.reload();
+        }
+
 
 })

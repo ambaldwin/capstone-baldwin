@@ -54,6 +54,24 @@ exports.seed = function(knex) {
         dietary: 'Dairy-free',
         pickup: 'After 7 pm',
         price: 8.99
+      },
+      {
+        restaurant_id: 4,
+        user_id: null,
+        name: 'Scarola Pizza',
+        details: 'Smoked mozzarella, bitter greens, black olive, red onion.',
+        dietary: 'Vegetarian',
+        pickup: 'Between 3-4pm',
+        price: 7.99
+      },
+      {
+        restaurant_id: 4,
+        user_id: null,
+        name: 'Mais Pizza',
+        details: 'Mozzarella, sweet corn, crème fraîche, garlic, chive.',
+        dietary: 'Can be vegan cheese.',
+        pickup: 'Between 3-4pm',
+        price: 4.99
       }]);
     });
 };

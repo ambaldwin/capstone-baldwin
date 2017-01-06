@@ -15,8 +15,4 @@ app.config(function ($routeProvider, stripeProvider) {
             templateUrl: '../views/restaurant.html',
             controller: 'RestaurantController'
         })
-        .when('/logout', {
-            templateUrl: '../views/logout.html',
-            controller: 'LogOutController'
-        })
 })

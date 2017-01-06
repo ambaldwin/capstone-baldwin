@@ -5,7 +5,7 @@
     <button type="button" class="btn btn-default btn-md dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
       <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Shopping Cart [ {{shoppingCart.length}} ]
     </button>
-    <a href="#/logout" ng-hide="user.id === null" class="btn btn-default btn-md" role="button">Log Out</a>
+    <a href="#/" ng-show="{{user.name}}" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a>
 
     <ul class="dropdown-menu dropdown-menu-right">
       <div class="cart">
@@ -36,8 +36,8 @@
             A text message lets you know when it's ready. <strong>Easy.</strong>
           </p>
       </div>
-      <a href="#/register" class="btn btn-default login center-block">SIGN UP | LOG IN</a>
-      <h2 class="pounds"><strong>Pounds of food saved this year: {{pounds}}</strong></h2>
+      <a href="#/register" class="btn btn-default login center-block btn-lg">SIGN UP | LOG IN</a>
+      <h2 class="pounds"><strong>Pounds of food saved this year: {{pounds | number}}</strong></h2>
     </div>
 
     <iframe class="col-xs-6" height="560" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
@@ -46,7 +46,7 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="row main">
 
         <!-- featured restaurants -->
         <div class="left-column col-xs-6 col-md-4 panel panel-default">
@@ -60,16 +60,24 @@
           </select>
           <hr>
 
+          <div class="panel facts">
+            <h3>More than</h3><h2><strong>$160 billion</strong></h2><h3>is wasted each year.</h3>
+            <h2>That's <strong>40%</strong> of all food produced!</h2>
+            <h3>Or, 20 pounds per person per month!</h3>
+          </div>
+
           <h3>Featured Restaurants:</h3>
           <div ng-repeat="rest in view.restArray" class="col-md-12 panel panel-default">
             <div class="panel-body">
-                <div class="media">
-                    <div class="media-body">
+                <div class="media center-block">
+                    <div class="media-body restaurant">
                         <img ng-class="image" class="main-image" ng-src="{{rest.image}}">
                         <h4><strong>{{rest.name}}</strong></h4>
+                        <div class="pull-right">
+                        </div>
                     </div>
+                  </div>
                 </div>
-            </div>
           </div>
         </div>
 
