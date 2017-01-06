@@ -5,7 +5,7 @@
     <button type="button" class="btn btn-default btn-md dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
       <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Shopping Cart [ {{shoppingCart.length}} ]
     </button>
-    <!-- <a href="#/" ng-show="{{user.name}}" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a> -->
+    <a href="#/" ng-show="user.name === null" ng-click="logout()" class="btn btn-default btn-md" role="button">Log Out</a>
 
     <ul class="dropdown-menu dropdown-menu-right">
       <div class="cart">
@@ -61,9 +61,10 @@
           <hr>
 
           <div class="panel facts">
-            <h3>More than</h3><h2><strong>$160 billion</strong></h2><h3>is wasted each year.</h3>
-            <h2>That's <strong>40%</strong> of all food produced!</h2>
-            <h3>Or, 20 pounds per person per month!</h3>
+            <h3>More than...</h3>
+            <h2><strong>$160 billion</strong><small>is wasted each year.</small></h2>
+             <h2><small>That's</small><strong> 40%</strong><small>of all food produced!</small></h2>
+            <h2><small>Or,</small><strong> 20 lbs</strong><small> per person per month!</small></h2>
           </div>
 
           <h3>Featured Restaurants:</h3>
