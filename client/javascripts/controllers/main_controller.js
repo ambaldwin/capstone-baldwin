@@ -8,7 +8,6 @@ app.controller('MainController', function($scope, $routeParams, $location, $cook
     $scope.user = cookie
 
     mainService.meals().then(function(returnedMeals) {
-      console.log(returnedMeals.data);
         $scope.view.mealsArray = returnedMeals.data
     })
 

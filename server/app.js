@@ -15,7 +15,7 @@ var edit = require('./routes/edit');
 var signup = require('./routes/signup');
 var register = require('./routes/register');
 var sms = require('./routes/sms');
-var stripe = require('./routes/stripe');
+var striped = require('./routes/striped');
 var registeruser = require('./routes/registeruser');
 var signupuser = require('./routes/signupuser');
 
@@ -32,9 +32,9 @@ app.use('/edit', edit);
 app.use('/signup', signup);
 app.use('/register', register);
 app.use('/sms', sms);
-app.use('/stripe', stripe);
 app.use('/registeruser', registeruser);
 app.use('/signupuser', signupuser);
+app.use('/striped', striped);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -63,8 +63,11 @@ app.controller('RestaurantController', function($scope, $route, $cookies, mainSe
 
         //send text message to user, twillio stuff
         smsService.sms(meal).then(function(results) {
-          console.log(results.data);
         })
+
+        // $scope.text="Success: text message sent to buyer."
+
     }
+
 
 })
