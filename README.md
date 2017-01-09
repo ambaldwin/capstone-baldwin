@@ -30,7 +30,7 @@ Leftover Love allows restaurants to sell this extra food at a discount to custom
 
 5. A button pops up on an individual meal when the meal has been ordered. The restaurant can click when the meal is ready for pickup. This sends a text message alert to the buyer. The 'total number of pounds' number on this page increments here and also on the home page.
 
-*Note:* Phone numbers have to be verified by Twilio to work, and only one can be verified at a time, so please watch the video for demonstration.
+*Note:* Phone numbers have to be verified by Twilio to work, and only one can be verified at a time. Thus, a user has to be signed up as me with my phone number to work. Please see video for demo.
 
 ![screen shot 2017-01-09 at 11 18 29 am](https://cloud.githubusercontent.com/assets/18018191/21779385/b1ed97c8-d664-11e6-92d7-7eb9c333d0b9.png)
 
