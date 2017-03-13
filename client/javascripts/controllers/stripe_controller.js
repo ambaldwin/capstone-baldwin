@@ -7,8 +7,6 @@ app.controller('StripeController', function($scope, $location, $cookies, stripe,
         .then((results) => {
           var token = results.id
 
-          console.log('results:', results);
-
           stripeService.sendToken(token).then(function() {
           })
 
