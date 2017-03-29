@@ -26,21 +26,24 @@
 <stripe-directive></stripe-directive>
 
 <div class="jumbotron">
-  <div class="row jumbo-row">
-    <div class="jumbotron-left col-xs-6">
-      <h1>let's save our food,</h1>
-      <h2 class="eachMeal">one leftover at a time.</h2>
-      <div class="row">
-          <p class="works">
-            Delicious food from your local restaurants.<br>
-            A text message lets you know when it's ready. <strong>Easy.</strong>
-          </p>
+  <div class="container-fluid">
+    <div class="row jumbo-row">
+      <div class="jumbotron-left col-xs-12 col-md-8 col-lg-6">
+        <h1>let's save our food,</h1>
+        <h2 class="eachMeal">one leftover at a time.</h2>
+        <div class="">
+            <p class="works">
+              Delicious food from your local restaurants.<br>
+              A text message lets you know when it's ready. <strong>Easy.</strong>
+            </p>
+        </div>
+        <a href="#/register" class="btn btn-default login center-block btn-lg">SIGN UP | LOG IN</a>
+        <h2 class="pounds">Pounds of food saved this year: <strong>  {{pounds | number}}</strong></h2>
       </div>
-      <a href="#/register" class="btn btn-default login center-block btn-lg">SIGN UP | LOG IN</a>
-      <h2 class="pounds">Pounds of food saved this year: <strong>  {{pounds | number}}</strong></h2>
+      <div class="">
+        <iframe class="col-xs-12 col-md-8 col-lg-6" height="560" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
-
-    <iframe class="col-xs-6" height="560" src="https://www.youtube.com/embed/i8xwLWb0lLY" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -49,7 +52,7 @@
     <div class="row main">
 
         <!-- featured restaurants -->
-        <div class="left-column col-xs-6 col-md-4 panel panel-default">
+        <div class="left-column col-xs-12 col-md-8 col-lg-4 panel panel-default">
           <br>
           <input type="text" class="searchBox" ng-model="view.search" placeholder="Search">
 
